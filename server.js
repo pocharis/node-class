@@ -48,6 +48,12 @@ app.get('/about', (req, res) =>{
     });
 });
 
+app.get('/heroku', (req, res) => {
+    res.render('heroku.hbs', {
+        pageTitle:'About Page',
+    })
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage : 'Bad request bro'
